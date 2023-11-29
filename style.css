@@ -1,0 +1,100 @@
+body {
+   background: linear-gradient(80deg,#a641c3,#fd1d1d,#f09d2a );
+   background-size: cover;
+   width: 100%;
+   min-height: 100vh;
+}
+
+h1 img {
+    height: 45px;
+    width: 45px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: dodgerblue;
+    text-shadow: black 4px 0 10px;
+    margin-top: 80px;
+    font-size: 60px;
+}
+
+.control {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 30%;
+    background:lightgray;
+    padding: 14px;
+    font-weight: 16px;
+    font-size: 18px;
+    border-radius: 20px;
+    opacity: .7;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: dodgerblue;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    width: 90px;
+    height: 50px;
+    top: 0;
+    right: 550px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.todos {
+    margin-top: 80px;
+}
+
+.todos li {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border: 1px solid black;
+    font-size: 22px;
+    padding: 12px 8px 12px 60px;
+    position: relative;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.todos li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 10%;
+    background-image: url("images/uncheck-cir.png");
+    background-size: cover;
+    background-position: center;
+    top: 30px;
+    left: 12px;
+  }
+
+  ul li.checked::before {
+    background-image: url("images/check-cir.png");
+  }
+
+@media screen and (max-width: 900px){
+    button {
+       right: 250px; 
+    }
+}
