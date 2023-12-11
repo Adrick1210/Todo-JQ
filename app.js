@@ -1,13 +1,9 @@
 // define the variables used
 $input = $("input");
-// console.log($input);
 $todos = $(".todos");
-// console.log($todos);
-const $modal = $('<div>').addClass('modal');
 
 // store the button in a variable
 $button = $("button");
-// console.log($button);
 
 // Event listener for the button
 $button.on("click", (event) => {
@@ -27,7 +23,6 @@ $(".todos").on("click", ".trash", function () {
 
 // event to add checked
 $(".todos").on("click", ".todo", function () {
-  // console.log('clicked');
   $(this).toggleClass("checked");
 });
 
