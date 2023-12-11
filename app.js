@@ -11,15 +11,12 @@ $button = $("button");
 
 // Event listener for the button
 $button.on("click", (event) => {
-  // console.log('clicked')
   const val = $input.val();
-  // console.log(val)
   const $todo = $("<li>").addClass("todo").text(val);
-  $todos.append($todo);
   const $trash = $("<span>").addClass("trash");
-  $todo.append($trash);
   const $edit = $("<span>").addClass("edit");
-  $todo.append($edit);
+  $todo.append($trash, $edit);
+  $todos.append($todo);
   $input.val("");
 });
 
