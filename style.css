@@ -1,5 +1,8 @@
 body {
-   background: linear-gradient(80deg,#a641c3,#fd1d1d,#f09d2a );
+   background:linear-gradient(204deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+   linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+   linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+   background-attachment: fixed;
    background-size: cover;
    width: 100%;
    min-height: 100vh;
@@ -18,7 +21,7 @@ h1 {
     align-items: center;
     color: dodgerblue;
     text-shadow: black 4px 0 10px;
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 60px;
 }
 
@@ -68,7 +71,6 @@ button {
     display: flex;
     align-items: center;
     height: 60px;
-    border: 1px solid black;
     font-size: 22px;
     padding: 12px 8px 12px 60px;
     position: relative;
@@ -79,8 +81,8 @@ button {
 .todos li::before {
     content: "";
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 35px;
+    width: 35px;
     border-radius: 10%;
     background-image: url("images/uncheck-cir.png");
     background-size: cover;
@@ -89,12 +91,127 @@ button {
     left: 12px;
   }
 
-  ul li.checked::before {
+  .todos li.checked::before {
     background-image: url("images/check-cir.png");
+    top: 34px;
+    left: 14px;
+    height: 28px;
+    width: 28px;
   }
 
+  .todos li span {
+    position: absolute;
+    right: 100px;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .todos li span.trash::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+    background-image: url("images/trash-bin-3.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 20px;
+  }
+
+  .todos li span.edit::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10%;
+    background-image: url("images/edit-1.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 20px;
+  }
 @media screen and (max-width: 900px){
     button {
        right: 250px; 
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 33px;
+    }
+    h1 img{
+        height: 30px;
+        width: 30px;
+        margin-left: 8px;
+        margin-right: 2px;
+    }
+    .control {
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        width: 75%;
+        height: 12px;
+        margin-right: 10px;
+    }
+    button {
+       right: 40px;
+       height: 42px;
+       right: 20px;
+    }
+    .todos {
+       margin-top: 25px;
+       position: relative;
+       flex-direction: column;
+       width: 100%;
+       right: 10px;
+       padding-bottom: 10px;
+    }
+    .todo {
+        display: flex;
+        justify-content: start;
+        position: relative;
+        right: 182px;
+        width: 78%;
+        border-radius: 25px;
+        background-color: whitesmoke;
+        opacity: 0.7;
+    }
+    .todos li {
+        font-size: 17px;
+        color: black;
+        margin-top: 10px;
+        padding: 17px 8px 12px 50px;
+    }
+    .todos li.checked {
+        display: flex;
+        position: relative;
+        background-color: whitesmoke;
+        border-radius: 25px;
+        opacity: 0.7;
+        right: 182px;
+        width: 78%;
+    }
+    .todos li span.trash::before {
+        display: flex;
+        position: relative;
+        left: 50px;
+        top: 28px;
+    }
+    .todos li span.edit::before {
+        display: flex;
+        position: relative;
+        left: 95px;
+        top: 34px;
+        
     }
 }
