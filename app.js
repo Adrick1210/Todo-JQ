@@ -3,6 +3,7 @@ $input = $("input");
 // console.log($input);
 $todos = $(".todos");
 // console.log($todos);
+const $modal = $('<div>').addClass('modal');
 
 // store the button in a variable
 $button = $("button");
@@ -28,7 +29,10 @@ $(".todos").on("click", ".trash", function () {
 });
 
 // event to add checked
-$('.todos').on('click', '.todo', function(){
-    // console.log('clicked');
-    $(this).toggleClass('checked');
+$(".todos").on("click", ".todo", function () {
+  // console.log('clicked');
+  $(this).toggleClass("checked");
 });
+
+
+

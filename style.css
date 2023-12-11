@@ -1,217 +1,221 @@
 body {
-   background:linear-gradient(204deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-   linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-   linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-   background-attachment: fixed;
-   background-size: cover;
-   width: 100%;
-   min-height: 100vh;
+  background: linear-gradient(
+      204deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
 }
 
 h1 img {
-    height: 45px;
-    width: 45px;
-    margin-left: 12px;
-    margin-right: 10px;
+  height: 45px;
+  width: 45px;
+  margin-left: 12px;
+  margin-right: 10px;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: dodgerblue;
-    text-shadow: black 4px 0 10px;
-    margin-top: 20px;
-    font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: dodgerblue;
+  text-shadow: black 4px 0 10px;
+  margin-top: 20px;
+  font-size: 60px;
 }
 
 .control {
-    margin-top: 120px;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 input {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    width: 30%;
-    background:lightgray;
-    padding: 14px;
-    font-weight: 16px;
-    font-size: 18px;
-    border-radius: 20px;
-    opacity: .7;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 30%;
+  background: lightgray;
+  padding: 14px;
+  font-weight: 16px;
+  font-size: 18px;
+  border-radius: 20px;
+  opacity: 0.7;
 }
 
 button {
-    border: none;
-    outline: none;
-    background: dodgerblue;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    border-radius: 20px;
-    width: 90px;
-    height: 50px;
-    top: 0;
-    right: 550px;
-    position: absolute;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  background: dodgerblue;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  width: 90px;
+  height: 50px;
+  top: 0;
+  right: 550px;
+  position: absolute;
+  cursor: pointer;
 }
 
 .todos {
-    margin-top: 80px;
+  margin-top: 80px;
+  padding-bottom: 6.74rem;
 }
 
 .todos li {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    font-size: 22px;
-    padding: 12px 8px 12px 60px;
-    position: relative;
-    margin-right: 150px;
-    margin-left: 150px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 22px;
+  padding: 12px 8px 12px 60px;
+  position: relative;
+  margin-right: 150px;
+  margin-left: 150px;
 }
 
 .todos li::before {
-    content: "";
-    position: absolute;
-    height: 35px;
-    width: 35px;
-    border-radius: 10%;
-    background-image: url("images/uncheck-cir.png");
-    background-size: cover;
-    background-position: center;
-    top: 30px;
-    left: 12px;
-  }
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 10%;
+  background-image: url("images/uncheck-cir.png");
+  background-size: cover;
+  background-position: center;
+  top: 30px;
+  left: 12px;
+}
 
-  .todos li.checked::before {
-    background-image: url("images/check-cir.png");
-    top: 34px;
-    left: 14px;
-    height: 28px;
-    width: 28px;
-  }
+.todos li.checked::before {
+  background-image: url("images/check-cir.png");
+  top: 34px;
+  left: 14px;
+  height: 28px;
+  width: 28px;
+}
 
-  .todos li span {
-    position: absolute;
-    right: 100px;
-    top: 2px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-  
-  .todos li span.trash::before {
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    border-radius: 10%;
-    background-image: url("images/trash-bin-3.png");
-    background-size: cover;
-    background-position: center;
-    top: 10px;
-    left: 20px;
-  }
+.todos li span {
+  position: absolute;
+  right: 100px;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
 
-  .todos li span.edit::before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 10%;
-    background-image: url("images/edit-1.png");
-    background-size: cover;
-    background-position: center;
-    top: 10px;
-    left: 20px;
+.todos li span.trash::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 10%;
+  background-image: url("images/trash-bin-3.png");
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 20px;
+}
+
+.todos li span.edit::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 10%;
+  background-image: url("images/edit-1.png");
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 20px;
+}
+@media screen and (max-width: 900px) {
+  button {
+    right: 250px;
   }
-@media screen and (max-width: 900px){
-    button {
-       right: 250px; 
-    }
 }
 
 @media only screen and (min-width: 300px) {
-    header {
-        display: flex;
-        justify-content: center;
-    }
-    h1 {
-        font-size: 33px;
-    }
-    h1 img{
-        height: 30px;
-        width: 30px;
-        margin-left: 8px;
-        margin-right: 2px;
-    }
-    .control {
-        margin-top: 0px;
-        display: flex;
-        justify-content: center;
-    }
-    input {
-        width: 75%;
-        height: 12px;
-        margin-right: 10px;
-    }
-    button {
-       right: 40px;
-       height: 42px;
-       right: 20px;
-    }
-    .todos {
-       margin-top: 25px;
-       position: relative;
-       flex-direction: column;
-       width: 100%;
-       right: 10px;
-       padding-bottom: 10px;
-    }
-    .todo {
-        display: flex;
-        justify-content: start;
-        position: relative;
-        right: 182px;
-        width: 78%;
-        border-radius: 25px;
-        background-color: whitesmoke;
-        opacity: 0.7;
-    }
-    .todos li {
-        font-size: 17px;
-        color: black;
-        margin-top: 10px;
-        padding: 17px 8px 12px 50px;
-    }
-    .todos li.checked {
-        display: flex;
-        position: relative;
-        background-color: whitesmoke;
-        border-radius: 25px;
-        opacity: 0.7;
-        right: 182px;
-        width: 78%;
-    }
-    .todos li span.trash::before {
-        display: flex;
-        position: relative;
-        left: 50px;
-        top: 28px;
-    }
-    .todos li span.edit::before {
-        display: flex;
-        position: relative;
-        left: 95px;
-        top: 34px;
-        
-    }
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 33px;
+  }
+  h1 img {
+    height: 30px;
+    width: 30px;
+    margin-left: 8px;
+    margin-right: 2px;
+  }
+  .control {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    width: 75%;
+    height: 12px;
+    margin-right: 10px;
+  }
+  button {
+    right: 40px;
+    height: 42px;
+    right: 20px;
+  }
+  .todos {
+    margin-top: 25px;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    right: 10px;
+    padding-bottom: 10px;
+  }
+  .todo {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    right: 182px;
+    width: 78%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    opacity: 0.7;
+  }
+  .todos li {
+    font-size: 17px;
+    color: black;
+    margin-top: 10px;
+    padding: 17px 8px 12px 50px;
+  }
+  .todos li.checked {
+    display: flex;
+    position: relative;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    opacity: 0.7;
+    right: 182px;
+    width: 78%;
+  }
+  .todos li span.trash::before {
+    display: flex;
+    position: relative;
+    left: 50px;
+    top: 28px;
+  }
+  .todos li span.edit::before {
+    display: flex;
+    position: relative;
+    left: 95px;
+    top: 34px;
+  }
 }
