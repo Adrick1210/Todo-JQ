@@ -54,6 +54,7 @@ button {
   border: none;
   outline: none;
   background: dodgerblue;
+  color: black;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -178,7 +179,7 @@ button {
   .todos {
     margin-top: 25px;
     position: relative;
-    margin-left: 10px;
+    margin-left: 15px;
     flex-direction: column;
     width: 100%;
     right: 10px;
