@@ -22,9 +22,8 @@ $(".todos").on("click", ".trash", function () {
 });
 
 // event to add checked
-$(".todos").on("click", ".todo", function () {
+$(".todos").on("click", "li", function () {
   $(this).toggleClass("checked");
 });
 
-
-
+// event to change todo

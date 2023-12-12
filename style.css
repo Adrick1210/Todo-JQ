@@ -1,15 +1,30 @@
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    rgba(195, 73, 65, 1) 6%,
+    rgba(193, 162, 8, 1) 20%,
+    rgba(131, 199, 19, 1) 39%,
+    rgba(36, 183, 172, 1) 58%,
+    rgba(42, 116, 240, 1) 76%,
+    rgba(116, 30, 182, 1) 92%
+  );
+}
+
 body {
-  background: linear-gradient(
-      204deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  background-image: var(--gradient);
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 500%;
+  animation: bg-animation 20s infinite alternate;
   width: 100%;
   min-height: 100%;
+}
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 h1 img {
@@ -47,7 +62,7 @@ input {
   font-weight: 16px;
   font-size: 18px;
   border-radius: 20px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 button {
@@ -189,7 +204,7 @@ button {
     display: flex;
     justify-content: start;
     position: relative;
-    right: 182px;
+    right: 188px;
     width: 78%;
     border-radius: 25px;
     background-color: whitesmoke;
